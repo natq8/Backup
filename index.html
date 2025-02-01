@@ -113,18 +113,19 @@
             color: black; /* Changed font color to black */
         }
         .next-button {
-            background-color: #0070ba;
+            background-color: grey; /* Default grey color */
             color: white;
             border: none;
             padding: 15px;
             border-radius: 5px;
-            cursor: pointer;
+            cursor: not-allowed; /* Disabled cursor */
             width: 100%; /* Adjusted width */
             margin-top: 20px;
             font-size: 1.2em;
         }
-        .next-button:hover {
-            background-color: #005c99;
+        .next-button.enabled {
+            background-color: #0070ba; /* Active color */
+            cursor: pointer; /* Enabled cursor */
         }
         .cancel-button {
             background-color: #ddd;
@@ -279,12 +280,14 @@
             // Remove commas before parsing the value
             let numericValue = parseFloat(amountInput.value.replace(/,/g, ''));
 
-            if (!isNaN(numericValue) && numericValue > 0) {
-                nextButton.style.backgroundColor = "#0070ba";
+            if (!isNaN(numericValue) && numericValue >= 0.01) {
+                nextButton.classList.add("enabled");
                 nextButton.disabled = false;
+                nextButton.style.cursor = "pointer";
             } else {
-                nextButton.style.backgroundColor = "grey";
+                nextButton.classList.remove("enabled");
                 nextButton.disabled = true;
+                nextButton.style.cursor = "not-allowed";
             }
         }
     </script>
