@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal: Send Money Preview</title>
+    <link rel="icon" type="image/x-icon" href="https://www.paypalobjects.com/favicon.ico?spm=5aebb161.188675ba.0.0.a8f3c921ugldmC&file=favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #142C8E; /* Paypal Blue background */
+            padding: 10px 20px;
+            color: white;
+        }
+        .top-bar .logo {
+            width: 25px; /* Adjust size of the logo */
+            height: auto;
+            margin-right: 20px;
+        }
+        .top-bar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between menu items */
+        }
+        .top-bar .menu div {
+            color: #b3d9ff; /* Light blue text */
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .top-bar .menu div.active {
+            background-color: white; /* White pill-shaped highlight */
+            color: #0070ba; /* Blue text for active item */
+            padding: 5px 15px;
+            border-radius: 20px; /* Pill shape */
+            font-weight: bold;
+        }
+        .top-bar .actions {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between icons and logout */
+        }
+        .top-bar .actions .icon {
+            font-size: 1.2em;
+            color: white;
+            cursor: pointer;
+        }
+        .top-bar .actions .logout {
+            color: white;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+        /* Main Content */
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-section img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .profile-section .details {
+            flex-grow: 1;
+        }
+        .profile-section .name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .profile-section .username {
+            font-size: 0.9em;
+            color: #777;
+            margin: 0;
+        }
+        /* Amount Input */
+        .amount-input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Align items with space between them */
+            margin-top: 20px;
+        }
+        .amount-input .dollar-sign {
+            font-size: 2em;
+            color: #000000;
+            margin-right: 5px; /* Small gap between $ and input */
+        }
+        .amount-input input {
+            font-size: 2em;
+            text-align: left; /* Align text to the left */
+            border: none; /* Removed underline */
+            width: auto; /* Adjust width dynamically */
+            outline: none;
+            color: black; /* Changed font color to black */
+        }
+        .next-button {
+            background-color: #0070ba;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Adjusted width */
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .next-button:hover {
+            background-color: #005c99;
+        }
+        .cancel-button {
+            background-color: #ddd;
+            color: #333;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .cancel-button:hover {
+            background-color: #ccc;
+        }
+        /* Bordered Box */
+        .bordered-box {
+            border: 1px solid #ddd; /* Gray border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Inner spacing */
+            margin-bottom: 20px; /* Space below the box */
+        }
+        /* Footer */
+        footer {
+            background-color: #FFFFFF; /* White background */
+            color: #333; /* Darker text color */
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Space between items */
+        }
+        footer img {
+            width: 90px; /* Adjust size of the logo */
+            height: auto;
+        }
+        footer a {
+            color: #333; /* Darker text color */
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <!-- Left Side -->
+        <div class="left">
+            <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-monotone-transparent.svg" alt="PayPal Logo" class="logo" width="50" height="50">
+            <div class="menu">
+                <div>Home</div>
+                <div class="active">Send and Request</div>
+                <div>Wallet</div>
+                <div>Activity</div>
+                <div>Help</div>
+            </div>
+        </div>
+        <!-- Right Side -->
+        <div class="actions">
+            <div class="icon">🔔</div>
+            <div class="icon">⚙️</div>
+            <div class="logout">LOG OUT</div>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Bordered Box -->
+        <div class="bordered-box">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <img src="https://via.placeholder.com/60" alt="Profile Picture">
+                <div class="details">
+                    <div class="name">John Doe</div>
+                    <div class="username">@johndoe</div>
+                </div>
+            </div>
+            <!-- Amount Input -->
+            <div class="amount-input">
+                <div style="display: flex; align-items: center;">
+                    <span class="dollar-sign">$</span>
+                    <input type="number" id="amount" placeholder="0.00" oninput="toggleNextButton()">
+                </div>
+                <select style="font-size: 1.2em; padding: 8px 20px; margin-left: 10px; border-radius: 30px; border: 1px solid #ddd; background-color: white; cursor: pointer;">
+                    <option value="CAD">CAD</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+            <!-- What's This For? Input -->
+            <div style="margin-top: 20px;">
+                <label for="message" style="display: block; font-weight: bold; margin-bottom: 5px;">What's this for?</label>
+                <textarea id="message" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+            </div>
+        </div>
+        <!-- User Agreement Text -->
+        <p style="font-size: 0.9em; color: #777; margin-top: 10px;">
+            For more information, please read our <a href="#" style="color: #000000;">user agreement</a>.
+        </p>
+        <!-- Buttons -->
+        <button id="next-button" class="next-button" disabled>Next</button>
+        <button class="cancel-button">Cancel</button>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-color.svg" alt="PayPal Logo" class="logo" width="50" height="50">
+        <a href="#" style="color: #333;">Help</a>
+        <a href="#" style="color: #333;">Contact Us</a>
+        <a href="#" style="color: #333;">Security</a>
+        <a href="#" style="color: #333;">Fees</a>
+    </footer>
+    <!-- JavaScript for Formatting -->
+    <script>
+        function formatAmount(input) {
+            let value = input.value.replace(/[^0-9.]/g, ''); // Remove non-numeric characters except for the decimal point
+
+            // Allow only one decimal point
+            let parts = value.split('.');
+            if (parts.length > 2) {
+                value = parts[0] + '.' + parts[1]; // Keep only the first decimal point
+            }
+
+            parts = value.split('.');
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Add commas for thousands separators
+            let dollars = parts[0] || '0'; // Default to 0 if no dollars are entered
+            let cents = parts[1] || '00'; // Default to 00 if no cents are entered
+
+            // Ensure cents are two digits
+            if (cents.length === 1) {
+                cents += '0'; // Add a zero if only one digit is entered
+            } else if (cents.length > 2) {
+                cents = cents.substring(0, 2); // Truncate to two digits if more are entered
+            }
+
+            // Combine dollars and cents
+            let formattedValue = `${dollars}.${cents}`;
+
+            // Update the input field with the formatted value
+            input.value = formattedValue;
+        }
+
+        // Trigger the format when the user types
+        document.getElementById("amount").addEventListener("input", function() {
+            formatAmount(this);
+        });
+
+        function toggleNextButton() {
+            let amountInput = document.getElementById("amount");
+            let nextButton = document.getElementById("next-button");
+
+            if (amountInput.value.trim() !== "" && parseFloat(amountInput.value) > 0) {
+                nextButton.style.backgroundColor = "#0070ba";
+                nextButton.disabled = false;
+            } else {
+                nextButton.style.backgroundColor = "grey";
+                nextButton.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
