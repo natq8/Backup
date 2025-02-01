@@ -212,7 +212,7 @@
             <div class="amount-input">
                 <div style="display: flex; align-items: center;">
                     <span class="dollar-sign">$</span>
-                    <input type="number" id="amount" placeholder="0.00" oninput="toggleNextButton()">
+                    <input type="text" id="amount" placeholder="0.00" oninput="formatAmount(this); toggleNextButton()">
                 </div>
                 <select style="font-size: 1.2em; padding: 8px 20px; margin-left: 10px; border-radius: 30px; border: 1px solid #ddd; background-color: white; cursor: pointer;">
                     <option value="CAD">CAD</option>
@@ -272,16 +272,14 @@
             input.value = formattedValue;
         }
 
-        // Trigger the format when the user types
-        document.getElementById("amount").addEventListener("input", function() {
-            formatAmount(this);
-        });
-
         function toggleNextButton() {
             let amountInput = document.getElementById("amount");
             let nextButton = document.getElementById("next-button");
 
-            if (amountInput.value.trim() !== "" && parseFloat(amountInput.value) > 0) {
+            // Remove commas before parsing the value
+            let numericValue = parseFloat(amountInput.value.replace(/,/g, ''));
+
+            if (!isNaN(numericValue) && numericValue > 0) {
                 nextButton.style.backgroundColor = "#0070ba";
                 nextButton.disabled = false;
             } else {
