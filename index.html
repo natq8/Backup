@@ -112,14 +112,15 @@
             outline: none;
             color: black; /* Changed font color to black */
         }
+        /* Next Button */
         .next-button {
             background-color: grey; /* Default grey color */
             color: white;
             border: none;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 50px; /* Pill shape */
             cursor: not-allowed; /* Disabled cursor */
-            width: 100%; /* Adjusted width */
+            width: 100%; /* Full width */
             margin-top: 20px;
             font-size: 1.2em;
         }
@@ -127,19 +128,20 @@
             background-color: #0070ba; /* Active color */
             cursor: pointer; /* Enabled cursor */
         }
+        /* Cancel Button */
         .cancel-button {
-            background-color: #ddd;
-            color: #333;
-            border: none;
-            padding: 15px;
-            border-radius: 5px;
+            background: none; /* No background */
+            border: none; /* No border */
+            color: #0000EE; /* Blue text */
+            text-decoration: underline; /* Underlined text */
+            font-size: 1.2em;
             cursor: pointer;
             width: 100%;
             margin-top: 10px;
-            font-size: 1.2em;
+            text-align: center; /* Center align text */
         }
         .cancel-button:hover {
-            background-color: #ccc;
+            text-decoration: none; /* Remove underline on hover */
         }
         /* Bordered Box */
         .bordered-box {
@@ -229,11 +231,11 @@
         </div>
         <!-- User Agreement Text -->
         <p style="font-size: 0.9em; color: #777; margin-top: 10px;">
-            For more information, please read our <a href="#" style="color: #0000EE;">user agreement</a>.
+            For more information, please read our <a href="#" style="color: #000000;">user agreement</a>.
         </p>
         <!-- Buttons -->
         <button id="next-button" class="next-button" disabled>Next</button>
-        <button class="cancel-button">Cancel</button>
+        <button id="cancel-button" class="cancel-button">Cancel</button>
     </div>
     <!-- Footer -->
     <footer>
