@@ -16,7 +16,7 @@ body {
 /* Top Bar */
 .top-bar {
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically centers all items */
     justify-content: space-between;
     background-color: #142C8E; /* PayPal Blue */
     padding: 10px 20px;
@@ -25,9 +25,11 @@ body {
 
 .top-bar .logo {
     width: 25px;
-    height: auto;
+    height: 25px; /* Explicitly set height to match width */
     margin-right: 20px;
-    flex-shrink: 0; /* Prevents the logo from shrinking */
+    flex-shrink: 0; /* Prevents shrinking */
+    object-fit: contain; /* Ensures the logo scales properly */
+    vertical-align: middle; /* Aligns the logo with the text baseline */
 }
 
 .top-bar .menu {
@@ -40,6 +42,7 @@ body {
     color: #b3d9ff; /* Light blue text */
     cursor: pointer;
     font-size: 0.9em;
+    line-height: 1.5; /* Ensures consistent line height */
     white-space: nowrap; /* Prevents text wrapping */
 }
 
