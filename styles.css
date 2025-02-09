@@ -23,13 +23,17 @@ body {
     color: white;
 }
 
-.top-bar .logo {
+.topbar .logo {
+    display: flex; /* Ensures proper alignment */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally if needed */
+    height: 100%; /* Ensures it fills the topbar */
+}
+
+.topbar .logo img {
     width: 25px;
     height: 25px;
-    margin-right: 20px;
-    flex-shrink: 0;
-    object-fit: contain;
-    vertical-align: middle;
+    object-fit: contain; /* Keeps the aspect ratio */
 }
 
 .top-bar .menu {
