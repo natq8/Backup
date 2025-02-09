@@ -207,44 +207,45 @@
             <div class="logout">LOG OUT</div>
         </div>
     </div>
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Bordered Box -->
-        <div class="bordered-box">
-            <!-- Profile Section -->
-            <div class="profile-section">
-                <img src="https://yeezy.com/cdn/shop/files/wlm-white-2.png?v=1738977965" alt="Profile Picture">
-                <div class="details">
-                    <div class="name">FUL NAME</div>
-                    <div class="username">@USERNAME</div>
-                </div>
-            </div>
-            <!-- Amount Input -->
-            <div class="amount-input">
-                <div style="display: flex; align-items: center;">
-                    <span class="dollar-sign">$</span>
-                    <input type="text" id="amount" placeholder="0.00" oninput="formatAmount(this); toggleNextButton()">
-                </div>
-                <select style="font-size: 1.2em; padding: 8px 20px; margin-left: 10px; border-radius: 30px; border: 1px solid #ddd; background-color: white; cursor: pointer;">
-                    <option value="CAD">CAD</option>
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                </select>
-            </div>
-            <!-- What's This For? Input -->
-            <div style="margin-top: 20px;">
-                <textarea id="message" rows="3" placeholder="What's this for?" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
-
+<!-- Main Content -->
+<div class="container">
+    <!-- Bordered Box - only contains profile, amount, and message -->
+    <div class="bordered-box">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="https://yeezy.com/cdn/shop/files/wlm-white-2.png?v=1738977965" alt="Profile Picture">
+            <div class="details">
+                <div class="name">FUL NAME</div>
+                <div class="username">@USERNAME</div>
             </div>
         </div>
-        <!-- User Agreement Text -->
-        <p style="font-size: 0.9em; color: #777; margin-top: 10px;">
-            For more information, please read our <a href="#" style="color: #0000EE;">user agreement</a>.
-        </p>
-        <!-- Buttons -->
-        <button id="next-button" class="next-button" disabled>Next</button>
-        <button id="cancel-button" class="cancel-button">Cancel</button>
+        <!-- Amount Input -->
+        <div class="amount-input">
+            <div style="display: flex; align-items: center;">
+                <span class="dollar-sign">$</span>
+                <input type="text" id="amount" placeholder="0.00" oninput="formatAmount(this); toggleNextButton()">
+            </div>
+            <select style="font-size: 1.2em; padding: 8px 20px; margin-left: 10px; border-radius: 30px; border: 1px solid #ddd; background-color: white; cursor: pointer;">
+                <option value="CAD">CAD</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        <!-- What's This For? Input -->
+        <div style="margin-top: 20px;">
+            <textarea id="message" rows="3" placeholder="What's this for?" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+        </div>
     </div>
+    
+    <!-- User Agreement - outside bordered box -->
+    <p style="font-size: 0.9em; color: #777; margin-top: 10px;">
+        For more information, please read our <a href="#" style="color: #0000EE;">user agreement</a>.
+    </p>
+    
+    <!-- Buttons - outside bordered box -->
+    <button id="next-button" class="next-button" disabled>Next</button>
+    <button id="cancel-button" class="cancel-button">Cancel</button>
+</div>
     <!-- Footer -->
     <footer>
         <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-color.svg" alt="PayPal Logo" class="logo" width="50" height="50">
