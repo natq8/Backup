@@ -8,7 +8,7 @@
 /* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
 }
@@ -18,22 +18,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #142C8E; /* PayPal Blue */
+    background-color: #142C8E;
     padding: 10px 20px;
     color: white;
 }
 
 .topbar .logo {
-    display: flex; /* Ensures proper alignment */
-    align-items: center; /* Centers vertically */
-    justify-content: center; /* Centers horizontally if needed */
-    height: 100%; /* Ensures it fills the topbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .topbar .logo img {
     width: 25px;
     height: 25px;
-    object-fit: contain; /* Keeps the aspect ratio */
+    object-fit: contain;
 }
 
 .top-bar .menu {
@@ -43,7 +43,7 @@ body {
 }
 
 .top-bar .menu div {
-    color: #b3d9ff; /* Light blue text */
+    color: #b3d9ff;
     cursor: pointer;
     font-size: 0.9em;
     line-height: 1.5;
@@ -51,7 +51,7 @@ body {
 }
 
 .top-bar .menu div.active {
-    background-color: #27419a; /* Dark blue background */
+    background-color: #27419a;
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -80,17 +80,18 @@ body {
 /* Main Content */
 .container {
     background: white;
-    padding: 0; /* Removed padding */
-    border-radius: 0; /* Removed rounded corners */
-    max-width: 600px;
-    margin: 20px auto;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    min-height: calc(100vh - 60px - 65px); /* Adjust based on header and footer height */
 }
 
 .bordered-box {
-    border: none; /* Removed border */
-    border-radius: 0; /* Removed rounded corners */
-    padding: 20px;
-    margin-bottom: 20px;
+    border: none;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
 }
 
 .profile-section {
@@ -164,7 +165,8 @@ body {
     border-radius: 50px;
     cursor: not-allowed;
     width: 100%;
-    margin-top: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
     font-size: 1.2em;
     transition: background-color 0.3s ease;
 }
@@ -183,7 +185,8 @@ body {
     font-size: 1.2em;
     cursor: pointer;
     width: 100%;
-    margin-top: 10px;
+    max-width: 1200px;
+    margin: 10px auto;
     text-align: center;
     transition: text-decoration 0.3s ease;
 }
@@ -198,13 +201,12 @@ footer {
     color: #333;
     text-align: center;
     padding: 15px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    border-top: 1px solid #ddd;
 }
 
 footer img {
