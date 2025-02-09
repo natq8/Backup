@@ -76,13 +76,22 @@ body {
 /* Main Content */
 .container {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove rounded corners */
+    /* Remove box-shadow */
+    /* box-shadow: none; */
     max-width: 600px;
     margin: 20px auto;
 }
 
+.bordered-box {
+    /* Remove border */
+    /* border: none; */
+    border-radius: 0; /* Remove rounded corners */
+    padding: 20px; /* Keep padding if you want spacing inside */
+    margin-bottom: 20px; /* Space below the box */
+}
+}
 .profile-section {
     display: flex;
     align-items: center;
