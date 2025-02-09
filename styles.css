@@ -87,13 +87,14 @@ body {
 }
 
 .bordered-box {
-    border: none;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
     padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: white;
+    width: 100%;
+    margin: 0;
 }
-
 .profile-section {
     display: flex;
     align-items: center;
