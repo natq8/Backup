@@ -84,6 +84,7 @@ body {
     width: 100%;
     margin: 0;
     min-height: calc(100vh - 60px - 65px); /* Adjust based on header and footer height */
+    max-width: 1400px;
 }
 
 .bordered-box {
