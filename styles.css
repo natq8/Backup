@@ -68,7 +68,11 @@ body {
 .container {
     background: white;
     min-height: calc(100vh - 125px);
-    max-width: 1400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 6000px;
+    margin: 20px auto;
 }
 
 .bordered-box {
