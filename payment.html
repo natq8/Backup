@@ -12,6 +12,9 @@
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes up the full viewport height */
         }
 
         /* Top Bar */
@@ -69,6 +72,7 @@
             background-color: #f5f5f5;
             padding: 10px;
             border-top: 1px solid #ddd;
+            margin-top: auto; /* Push the footer to the bottom */
         }
 
         .bottom-bar div {
@@ -84,8 +88,8 @@
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="menu">
-            <div class="active">Home</div>
-            <div>Send and Request</div>
+            <div>Home</div>
+            <div class="active">Send and Request</div>
             <div>Wallet</div>
             <div>Activity</div>
             <div>Help</div>
