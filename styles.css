@@ -70,7 +70,7 @@ body {
     min-height: calc(100vh - 125px);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: none;/*0 4px 8px rgba(0, 0, 0, 0.1); */
     width: 700px;
     margin: 20px auto; 
 }
