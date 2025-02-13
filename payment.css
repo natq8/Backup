@@ -1,1 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #142C8E;
+    padding: 10px 20px;
+    color: white;
+}
+
+.top-bar .logo img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.top-bar .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-bar .menu div {
+    color: #b3d9ff;
+    cursor: pointer;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.top-bar .menu div.active {
+    background-color: #27419a;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.top-bar .actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-bar .actions .icon, 
+.top-bar .actions .logout {
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Main Content */
+.container {
+    background: white;
+    min-height: calc(100vh - 125px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: none;/*0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 700px;
+    margin: 20px auto; 
+}
+
+.bordered-box {
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+    padding: 30px;
+    width: 100%;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.profile-section .name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.profile-section .username {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Amount Input */
+.amount-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.amount-input .dollar-sign {
+    font-size: 2em;
+    color: black;
+}
+
+.amount-input input {
+    font-size: 2em;
+    text-align: left;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+.amount-input select {
+    font-size: 1.2em;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Buttons */
+.next-button, .cancel-button {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.next-button {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: not-allowed;
+}
+
+.next-button.enabled {
+    background-color: #0070ba;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background: none;
+    border: none;
+    color: #0000EE;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.cancel-button:hover {
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #FFFFFF;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-top: 1px solid #ddd;
+}
+
+footer img {
+    width: 90px;
+    height: auto;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Placeholder Styling */
+input::placeholder {
+    color: black;
+}
 
