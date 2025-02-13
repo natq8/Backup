@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PayPal: Sending Money Selection</title>
-      <style>
-       body {
+    <style>
+        body {
             font-family: Arial, sans-serif;
             background-color: #ffffff;
             color: #333;
@@ -22,28 +21,31 @@
             padding: 10px 20px;
             color: white;
         }
-        
+
         .top-bar .left {
             display: flex;
             align-items: center;
         }
-        
+
         .top-bar .logo {
             width: 25px;
             height: 25px;
             margin-right: 20px;
             display: block;
         }
+
         .top-bar .menu {
             display: flex;
             align-items: center;
             gap: 20px; /* Space between menu items */
         }
+
         .top-bar .menu div {
             color: #b3d9ff; /* Light blue text */
             cursor: pointer;
             font-size: 0.9em;
         }
+
         .top-bar .menu div.active {
             background-color: #27419a; /* Dark blue background */
             color: white; /* White text */
@@ -51,22 +53,45 @@
             border-radius: 20px; /* Pill shape */
             font-weight: bold;
         }
+
         .top-bar .actions {
             display: flex;
             align-items: center;
             gap: 20px; /* Space between icons and logout */
         }
+
         .top-bar .actions .icon {
             font-size: 1.2em;
             color: white;
             cursor: pointer;
         }
+
         .top-bar .actions .logout {
             color: white;
             font-size: 0.9em;
             cursor: pointer;
         }
-
-    </style>  
+    </style>
 </head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="left">
+            <img src="logo.png" alt="Logo" class="logo"> <!-- Replace "logo.png" with your actual logo file -->
+            <div class="menu">
+                <div class="active">Home</div>
+                <div>Send Money</div>
+                <div>Requests</div>
+                <div>Wallet</div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="icon">🔔</div> <!-- Notification icon -->
+            <div class="icon">⚙️</div> <!-- Settings icon -->
+            <div class="logout">Logout</div>
+        </div>
+    </div>
+
+    <!-- Add more content here if needed -->
+</body>
 </html>
